@@ -11,7 +11,7 @@ Finally, the front end will be in Angular and will hopefully have a fully multi-
 
 Quick current development notes:
 (Current Date 11-9-2020)
-I used Kendo UI because the internet recommended using this 
+I used some of Kendo UI components because the internet recommended using this 
 because it is very good at creating charts, tables, etc. Which is good for a task manager/scheduler idea.
 
 

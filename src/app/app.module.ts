@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 
 import { HeaderComponent } from './header/header.component';
-import { SchedulerComponent } from './scheduler/scheduler.component';
+
 
 
 
@@ -15,8 +15,7 @@ import { SchedulerComponent } from './scheduler/scheduler.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SchedulerComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
