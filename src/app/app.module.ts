@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 
 import { HeaderComponent } from './header/header.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileContainerComponent } from './profile-container/profile-container.component';
 
 
 
@@ -15,7 +17,9 @@ import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProfileComponent,
+    ProfileContainerComponent
   ],
   imports: [
     BrowserModule,

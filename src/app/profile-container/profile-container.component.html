@@ -1,0 +1,24 @@
+
+<header>
+  <div class="brand">
+    <h5>Personal Scheduler</h5>
+    <div class="topnav">
+    </div>
+  </div>
+</header>
+
+
+<div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="selectedProfile">
+  <label ngbButtonLabel class="btn-primary" *ngFor="let profile of profiles">
+    <input ngbButton type="radio" [value]="profile">{{profile.Today}}
+  </label>
+</div>
+
+
+<div *ngIf="selectedProfile">
+  <app-profile [profile]="selectedProfile"></app-profile>
+</div>
+
+<div *ngIf="!selectedProfile">
+  No date/event selected! Conner please select something....
+</div>
