@@ -8,13 +8,6 @@
 </header>
 
 
-<div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="selectedProfile">
-  <label ngbButtonLabel class="btn-primary" *ngFor="let profile of profiles">
-    <input ngbButton type="radio" [value]="profile">{{profile.Today}}
-  </label>
-</div>
-
-
 <div *ngIf="selectedProfile">
   <app-profile [profile]="selectedProfile"></app-profile>
 </div>
