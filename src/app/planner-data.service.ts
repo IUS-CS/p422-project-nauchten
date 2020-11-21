@@ -15,7 +15,7 @@ export class Planner {
 @Injectable({
   providedIn: 'root'
 })
-export class SyllabusDataService {
+export class OurPlannerDataService {
   constructor(
     private http: HttpClient
   ) {
