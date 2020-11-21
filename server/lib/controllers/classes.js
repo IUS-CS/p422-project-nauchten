@@ -26,10 +26,10 @@ module.exports = {
       }
       if (!klass) {
         res.status(404);
-        res.json({'err': 'class not found'});
+        res.json({'err': 'Event not found'});
         return;
       }
-      console.log('sending class: ' + klass)
+      console.log('sending event: ' + klass)
       res.json(klass);
     })
   }

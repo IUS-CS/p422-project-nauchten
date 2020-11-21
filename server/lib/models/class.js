@@ -1,17 +1,14 @@
 const mongoose = require('mongoose');
 
 const ClassSchema = mongoose.Schema({
-  section: {
+  CurrentDate: {
     type: String,
     required: true,
     unique: true
   },
   title: String,
   description: String,
-  bookInfo: String,
-  meetingTime: String,
-  gradingScale: [String],
-  calendar: [String]
+  motivationToCompleteEvent: [String]
 });
 
 ClassSchema.query.bySection = function(name) {
