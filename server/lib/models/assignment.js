@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 const AssignmentSchema = mongoose.Schema({
-  section: {
+  CurrentDate: {
     type: String,
     required: true,
     unique: true
   },
-  name: String,
+  title: String,
   description: String,
-  rubric: [String]
+  motivationToCompleteEvent: [String]
 });
 
 AssignmentSchema.query.bySection = function(name) {
