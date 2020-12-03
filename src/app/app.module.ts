@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileContainerComponent } from './profile-container/profile-container.component';
 import {HttpClientModule} from '@angular/common/http';
+import { EventsComponent } from './events/events.component';
+import { PlannerComponent } from './planner/planner.component';
 
 
 
@@ -18,14 +20,16 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     ProfileComponent,
-    ProfileContainerComponent
+    ProfileContainerComponent,
+    EventsComponent,
+    PlannerComponent
   ],
   imports: [
     BrowserModule,
     SchedulerModule,
     BrowserAnimationsModule,
     DateInputsModule,
-    // HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
