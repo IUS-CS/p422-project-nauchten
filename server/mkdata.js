@@ -46,7 +46,7 @@ const event3 = new Class({
 
 
 
-mongoose.connect('mongodb://localhost:27017/courseware', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/p422-project-nauchten', {useNewUrlParser: true, useUnifiedTopology: true});
 
 event1.save().catch(err => console.error(err)).then(() => { console.log('saved event1') });
 event2.save().catch(err => console.error(err)).then(() => { console.log('saved event2') });

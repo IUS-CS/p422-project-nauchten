@@ -5,7 +5,7 @@ const routes = require('./lib/routes');
 
 let port = 6061;
 
-mongoose.connect('mongodb://localhost:27017/courseware', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/p422-project-nauchten', {useNewUrlParser: true, useUnifiedTopology: true});
 
 let app = express();
 
