@@ -33,7 +33,7 @@ const event2 = new Class({
 // event 3 for our event planner
 const event3 = new Class({
   CurrentDate: 'November 20, 2020',
-  title: 'Soccer Practice after dinner',
+  title: 'Soccer practice after dinner',
   description: 'Remember you have soccer practice at 8:30pm. Also bring a extra set of goalie gloves for Tommy',
 
   motivationToCompleteEvent: [
