@@ -5,7 +5,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
-export class Planner {
+export class Course {
   CurrentDate: string;
   title: string;
   description: string;
@@ -15,7 +15,7 @@ export class Planner {
 @Injectable({
   providedIn: 'root'
 })
-export class OurPlannerDataService {
+export class SyllabusDataService {
   constructor(
     private http: HttpClient
   ) {
@@ -23,8 +23,8 @@ export class OurPlannerDataService {
 
   private url = '/v1/classes';
 
-  public getPlanner(name: string): Observable<Planner> {
-    return this.http.get<Planner>(`${this.url}/${name}`);
+  public getCouse(name: string): Observable<Course> {
+    return this.http.get<Course>(`${this.url}/${name}`);
   }
 
   public getPlannerEvents(): Observable<string[]> {

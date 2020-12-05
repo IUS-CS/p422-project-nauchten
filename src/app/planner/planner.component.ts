@@ -1,6 +1,6 @@
 
 import {Component, OnInit} from '@angular/core';
-import {Course, SyllabusDataService} from '../syllabus-data.service';
+import {Course, SyllabusDataService} from '../planner-data.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {Observable} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
@@ -13,11 +13,11 @@ import {Location} from '@angular/common';
   styleUrls: ['./planner.component.css']
 })
 export class PlannerComponent implements OnInit {
-  selectedEventName: string;
-  selectedEvent: Observable<Course>;
+  selectedCourseName: string;
+  selectedCourse: Observable<Course>;
 
   constructor(
-  private OurPlannerDataService: OurPlannerDataService,
+  private syllabusDataService: SyllabusDataService,
   private router: Router,
   private route: ActivatedRoute,
   private location: Location
@@ -25,13 +25,13 @@ export class PlannerComponent implements OnInit {
   ngOnInit(): void {
     this.selectedCourse = this.route.paramMap.pipe(
       switchMap((params: ParamMap): Observable<Course> => {
-        return this.OurPlannerDataService.getCouse(params.get('class'));
+        return this.syllabusDataService.getCouse(params.get('class'));
       })
     );
   }
 
   public selectCourse(name: string): void {
-    this.selectedCourse = this.OurPlannerDataService.getCouse(name);
+    this.selectedCourse = this.syllabusDataService.getCouse(name);
     if (!this.selectedCourse) {
       this.router.navigateByUrl('/notfound');
     }

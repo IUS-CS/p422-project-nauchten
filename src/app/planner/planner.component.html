@@ -1,1 +1,21 @@
-<p>planner works!</p>
+<div *ngIf="!selectedCourse">
+  No event selected!
+</div>
+
+<div *ngIf="selectedCourse">
+  <h1>{{(selectedCourse | async)?.CurrentDate}}: {{(selectedCourse | async)?.title}}</h1>
+
+  <div><span class="inline-title">Description:</span> {{(selectedCourse | async)?.description}}</div>
+  <div><span class="inline-title">Motivation:</span> {{(selectedCourse | async)?.motivationToCompleteEvent}}</div>
+
+  <div class="title">Calendar</div>
+  <table>
+    <tr *ngFor="let day of (selectedCourse | async)?.CurrentDate">
+      <td>{{day}}</td>
+    </tr>
+  </table>
+
+
+  <button type="button" class="btn btn-secondary" (click)="goBack()">Back</button>
+</div>
+
