@@ -18,8 +18,8 @@ describe('ProfileComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
-  it('should create', () => {
+// unit test that tests if the component was create successfully
+  it('should create profile component', () => {
     expect(component).toBeTruthy();
   });
 });

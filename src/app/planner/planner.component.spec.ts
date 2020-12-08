@@ -18,8 +18,9 @@ describe('PlannerComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
-  it('should create', () => {
+// unit test that should create planner component
+  it('should create planner component', () => {
     expect(component).toBeTruthy();
   });
 });
+

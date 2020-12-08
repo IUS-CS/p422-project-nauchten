@@ -10,15 +10,11 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
+  // unit test that tests if the component was create successfully
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('untitled2 app is running!');
-  });
+
 });
