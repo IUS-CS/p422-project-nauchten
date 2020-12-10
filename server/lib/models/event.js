@@ -1,20 +1,21 @@
 const mongoose = require('mongoose');
 
-const ClassSchema = mongoose.Schema({
-  CurrentDate: {
+const EventSchema = mongoose.Schema({
+  eventName: {
     type: String,
     required: true,
     unique: true
   },
+  currentDate: String,
   title: String,
   description: String,
   motivationToCompleteEvent: [String]
 });
 
-ClassSchema.query.bySection = function(name) {
+EventSchema.query.bySection = function(name) {
   return this.where({section: name});
 }
 
-const Class = mongoose.model('Class', ClassSchema);
+const Event = mongoose.model('Class', EventSchema);
 
-module.exports = Class;
+module.exports = Event;

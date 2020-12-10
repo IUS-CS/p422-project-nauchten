@@ -1,9 +1,10 @@
 // Our backend server json data for the event planner - Conner Mayfield
 const mongoose = require('mongoose');
-const Class = require('./lib/models/class');
+const Event = require('./lib/models/event');
 
 // event 1 for our event planner
-const event1 = new Class({
+const event1 = new Event({
+  eventName: 'event1',
   CurrentDate: 'November 20, 2020',
   title: 'Calculus HW due tonight',
   description: 'The calculus HW is due tonight and its over chapter 4. Its Questions: 1-7',
@@ -16,7 +17,8 @@ const event1 = new Class({
   ],
 });
 // event 2 for our event planner
-const event2 = new Class({
+const event2 = new Event({
+  eventName: 'event2',
   CurrentDate: 'November 20, 2020',
   title: 'Dinner with family at 6pm',
   description: 'Remember you have dinner with your family tonight at Chilis at 6. Dont be late!!',
@@ -31,7 +33,8 @@ const event2 = new Class({
 
 
 // event 3 for our event planner
-const event3 = new Class({
+const event3 = new Event({
+  eventName: 'event3',
   CurrentDate: 'November 20, 2020',
   title: 'Soccer practice after dinner',
   description: 'Remember you have soccer practice at 8:30pm. Also bring a extra set of goalie gloves for Tommy',

@@ -1,21 +1,21 @@
-const Class = require('../models/class');
+const Class = require('../models/event');
 
 module.exports = {
   root: (req, res) => {
-    Class.find().exec((err, classes) => {
+    Class.find().exec((err, OurEvents) => {
       if (err) {
         res.status(500);
         res.json(err);
         return;
       }
       let ret = [];
-      for (let klass of classes) {
+      for (let klass of OurEvents) {
         ret.push(klass.section);
       }
       res.json(ret);
     })
   },
-  byClass: (req, res) => {
+  byEvent: (req, res) => {
     const section = req.params.class;
 
     Class.findOne().bySection(section).exec((err, klass) => {

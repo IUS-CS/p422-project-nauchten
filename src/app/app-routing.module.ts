@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PlannerComponent } from './planner/planner.component';
+import {HeaderComponent} from './header/header.component';
 
 // import {AssignmentsComponent} from './assignments/assignments.component';
 // import {AssignmentDetailComponent} from './assignment-detail/assignment-detail.component';
@@ -9,7 +10,8 @@ import { PlannerComponent } from './planner/planner.component';
 
 const routes: Routes = [
   // { path: 'catalog', component: CatalogComponent },
-  { path: 'syllabus/:class', component: PlannerComponent },
+  { path: 'planner/:event', component: PlannerComponent },
+  { path: '', component: HeaderComponent }
  // { path: 'assignments', component: AssignmentsComponent },
  // { path: 'assignments/:class/:name', component: AssignmentDetailComponent },
  // { path: '', redirectTo: '/catalog', pathMatch: 'full' },

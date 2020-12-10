@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileContainerComponent } from './profile-container/profile-container.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PlannerComponent } from './planner/planner.component';
+import {AppRoutingModule} from './app-routing.module';
 
 
 
@@ -24,6 +25,7 @@ import { PlannerComponent } from './planner/planner.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     SchedulerModule,
     BrowserAnimationsModule,
     DateInputsModule,

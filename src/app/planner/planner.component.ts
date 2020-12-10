@@ -25,20 +25,8 @@ export class PlannerComponent implements OnInit {
   ngOnInit(): void {
     this.selectedCourse = this.route.paramMap.pipe(
       switchMap((params: ParamMap): Observable<Course> => {
-        return this.syllabusDataService.getCouse(params.get('class'));
+        return this.syllabusDataService.getCouse(params.get('event'));
       })
     );
-  }
-
-  public selectCourse(name: string): void {
-    this.selectedCourse = this.syllabusDataService.getCouse(name);
-    if (!this.selectedCourse) {
-      this.router.navigateByUrl('/notfound');
-    }
-  }
-
-  public goBack(): void {
-    this.location.back();
-  }
-}
+  }}
 

@@ -2,7 +2,6 @@
   No event selected!
 </div>
 
-<div *ngIf="selectedCourse">
   <h1>{{(selectedCourse | async)?.CurrentDate}}: {{(selectedCourse | async)?.title}}</h1>
 
   <div><span class="inline-title">Description:</span> {{(selectedCourse | async)?.description}}</div>
@@ -15,7 +14,4 @@
     </tr>
   </table>
 
-
-  <button type="button" class="btn btn-secondary" (click)="goBack()">Back</button>
-</div>
 
