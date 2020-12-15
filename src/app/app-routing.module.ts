@@ -10,7 +10,7 @@ import {HeaderComponent} from './header/header.component';
 
 const routes: Routes = [
   // { path: 'catalog', component: CatalogComponent },
-  { path: 'planner/:event', component: PlannerComponent },
+  { path: 'planner/:event', component: PlannerComponent }, // route to get the calendar event and its backend data
   { path: '', component: HeaderComponent }
  // { path: 'assignments', component: AssignmentsComponent },
  // { path: 'assignments/:class/:name', component: AssignmentDetailComponent },

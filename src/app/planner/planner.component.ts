@@ -1,6 +1,6 @@
 
 import {Component, OnInit} from '@angular/core';
-import {Course, SyllabusDataService} from '../planner-data.service';
+import {Event, PlannerDataService} from '../planner-data.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {Observable} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
@@ -14,18 +14,18 @@ import {Location} from '@angular/common';
 })
 export class PlannerComponent implements OnInit {
   selectedCourseName: string;
-  selectedCourse: Observable<Course>;
+  selectedCourse: Observable<Event>;
 
   constructor(
-  private syllabusDataService: SyllabusDataService,
+  private syllabusDataService: PlannerDataService,
   private router: Router,
   private route: ActivatedRoute,
   private location: Location
 ) { }
   ngOnInit(): void {
     this.selectedCourse = this.route.paramMap.pipe(
-      switchMap((params: ParamMap): Observable<Course> => {
-        return this.syllabusDataService.getCouse(params.get('event'));
+      switchMap((params: ParamMap): Observable<Event> => {
+        return this.syllabusDataService.getEvent(params.get('event'));
       })
     );
   }}
