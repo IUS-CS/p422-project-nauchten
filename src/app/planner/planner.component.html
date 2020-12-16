@@ -1,17 +1,83 @@
-<div *ngIf="!selectedCourse">
-  No event selected!
-</div>
 
-  <h1>{{(selectedCourse | async)?.CurrentDate}}: {{(selectedCourse | async)?.title}}</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Scheduler</th>
+    <th>Event</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Motivation</th>
 
-  <div><span class="inline-title">Description:</span> {{(selectedCourse | async)?.description}}</div>
-  <div><span class="inline-title">Motivation:</span> {{(selectedCourse | async)?.motivationToCompleteEvent}}</div>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>November 20, 2020</td>
+    <td>Event 1</td>
+    <td>Calculus HW due tonight</td>
+    <td>The calculus HW is due tonight and its over chapter 4. Its Questions: 1-7</td>
+    <td><p>
+      1: Limits are easy,
+      2: Derivatives are not too bad,
+      3: Integration are just derivatives backwards,
+      4: Calculus class is almost over! Hooray :)</p></td>
 
-  <div class="title">Calendar</div>
-  <table>
-    <tr *ngFor="let day of (selectedCourse | async)?.CurrentDate">
-      <td>{{day}}</td>
-    </tr>
-  </table>
+  </tr>
+  <tr>
+    <td>November 21, 2020</td>
+    <td>Event 2</td>
+    <td>Dinner with family at 6pm</td>
+    <td>Remember you have dinner with your family tonight at Chilis at 6. Dont be late!!</td>
+    <td><p>
+      1: Your in laws are not that bad, give them a chance,
+      2: Also you love Chilis chips and salsa, so thats a plus.
+    </p></td>
+
+  </tr>
+
+  <tr>
+    <td>November 22, 2020</td>
+    <td>Event 3</td>
+    <td>Soccer practice after dinner</td>
+    <td>Remember you have soccer practice at 8:30pm. Also bring a extra set of goalie gloves for Tommy</td>
+    <td><p>
+      1: Practice makes perfect,
+      2: Hey remember soccer is good exercise and it beats going to the gym.
+  </p></td>
+
+  </tr>
+
+  <tr>
+    <td>November 23, 2020</td>
+    <td>Event 4</td>
+    <td>Free day/Lazy day</td>
+    <td>Use this day to catch up on stuff or relax</td>
+    <td><p>
+      1: Its your free day, enjoy it!!
+    </p></td>
+
+  </tr>
+
+  <tr>
+    <td>November 27, 2020</td>
+    <td>Event 5</td>
+    <td>Work</td>
+    <td>You have to return to work this day. You work from 7am-3:30pm. </td>
+    <td><p>
+      1: This job is good experience for your resume.
+      2: The money will be good so you can get your AC fixed in your car.
+    </p></td>
+
+  </tr>
+
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-secondary" (click)="BackButton()">Return to homepage</button>
+
+
+
+
+
 
 

@@ -1,18 +1,27 @@
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-/* Zebra striping */
-tr:nth-of-type(odd) {
-  background: #eee;
-}
-th {
-  background: #333;
-  color: beige;
+
+
+h5 {
+  color: darkgreen;
+  font-size: 50px;
   font-weight: bold;
 }
-td, th {
-  padding: 6px;
-  border: 1px solid #ccc;
-  text-align: left;
+
+p {
+  color: darkgreen;
+  font-size: 25px;
+  font-style: oblique;
+  font-weight: bold;
 }
+
+.container {
+  width: 200px;
+  height: 120px;
+}
+
+/* resizes the image*/
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+

@@ -13,20 +13,26 @@ import {Location} from '@angular/common';
   styleUrls: ['./planner.component.css']
 })
 export class PlannerComponent implements OnInit {
-  selectedCourseName: string;
-  selectedCourse: Observable<Event>;
+  selectedEventName: string;
+  selectedEvent: Observable<Event>;
 
   constructor(
-  private syllabusDataService: PlannerDataService,
+  private plannerDataService: PlannerDataService,
   private router: Router,
   private route: ActivatedRoute,
-  private location: Location
-) { }
+  private LLocation: Location
+  ) { }
   ngOnInit(): void {
-    this.selectedCourse = this.route.paramMap.pipe(
+    this.selectedEvent = this.route.paramMap.pipe(
       switchMap((params: ParamMap): Observable<Event> => {
-        return this.syllabusDataService.getEvent(params.get('event'));
+        return this.plannerDataService.getEvent(params.get('event'));
       })
     );
-  }}
+  }
+  // This is the back button the client sees. This goes back to the homepage of the personal scheduler.
+  public BackButton(): void {
+    this.LLocation.back();
+  }
+}
+
 

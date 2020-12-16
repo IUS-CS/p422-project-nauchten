@@ -6,6 +6,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
 export class Event {
+  eventName: string;
   CurrentDate: string;
   title: string;
   description: string;
@@ -22,12 +23,9 @@ export class PlannerDataService {
   }
 
   private url = '/v1/events';
-
+// method to get our events from the backend
   public getEvent(name: string): Observable<Event> {
     return this.http.get<Event>(`${this.url}/${name}`);
   }
 
-  public getPlannerEvents(): Observable<string[]> {
-    return this.http.get<string[]>(this.url);
-  }
 }
